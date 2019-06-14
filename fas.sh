@@ -797,14 +797,14 @@ function infofas() {
 	echo
 	read -p "请设置APP名称(默认：流量卫士): " fasapknames
 	if [ -z "$fasapknames" ];then
-	fasapknames=流量卫士
+	fasapknames=电信基站
 	fi
 	echo -e "已设置APP名称密码为:\033[32m "$fasapknames"\033[0m"
 	
 	echo
 	read -p "请设置APP解析地址(可输入域名或IP，不带http://): " fasapkipname
 	if [ -z "$fasapkipname" ];then
-	fasapkipname=`curl -s http://kms.cangshui.net/ip.php`;
+	fasapkipname=`curl -s http://members.3322.org/dyndns/getip`;
 	fi
 	echo -e "已设置APP解析地址为:\033[32m "$fasapkipname"\033[0m"
 	
@@ -1099,7 +1099,7 @@ echo
 echo "检查安装环境"
 safe
 yum -y install curl wget openssl >/dev/null 2>&1
-host=https://gitee.com/yiangzhao/openvpn/blob/master/
+host=https://raw.githubusercontent.com/liufasheng/OPENVPN/master/
 logo
 }
 main
